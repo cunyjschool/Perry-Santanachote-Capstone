@@ -1,11 +1,5 @@
 <div class="col2">
 
-	<?php include('ads/ads-management.php'); ?>
-	
-	<?php include('ads/ads-300x250.php'); ?>
-
-	<?php include('ads/ads-top.php'); ?>
-
    <div class="col2_box">
    
    <?php 
@@ -52,15 +46,20 @@ if ($children) { ?>
    <div class="sideTabs">
    
         <ul class="idTabs">
+				<li><a href="#face"><?php _e('Facebook ',woothemes); ?></a></li>
 				<li><a href="#feat"><?php _e('Latest News ',woothemes); ?></a></li>
 				<li><a href="#pop"><?php _e('Popular ',woothemes); ?></a></li>
-            <li><a href="#comm"><?php _e('Latest Comments ',woothemes); ?></a></li>
+            	<li><a href="#comm"><?php _e('Comments ',woothemes); ?></a></li>
         </ul>
         
         <div class="fix"></div>
 
 		<div id="sidetabber">
 		
+			<ul class="list4" id="face">
+				<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FBurma-Bulletin%2F156313037733797&amp;width=288&amp;colorscheme=light&amp;connections=10&amp;stream=true&amp;header=true&amp;height=587" scrolling="no" frameborder="0" style="border:0; overflow:hidden; width:292px; height:587px;" allowTransparency="true"></iframe>
+			</ul>
+			
 			<ul class="list2" id="feat">
 				<?php query_posts('showposts=10'); ?>
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -79,13 +78,18 @@ if ($children) { ?>
 		</div><!--/sidetabber-->
 	
 	</div><!--/sideTabs-->
+	
+	<div class="fix" style="height:10px !important;"></div>
+	
+	<div class="flickr">
+		<h2><?php _e('Events Calendar ',woothemes); ?> <span class="flickr-ar"> - <a href="/submit-an-event"><?php _e('Click here to submit an Event',woothemes); ?></a></span></h2>
+		<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=40lgd70eut68f589srhcrs3cto%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FNew_York" style=" border-width:0;margin-top:-10px;" width="298" height="400" frameborder="0" scrolling="no"></iframe>
+	</div>
    	
 	<?php } ?>
 	
     <div class="fix" style="height:10px !important;"></div>
-    
-    <?php include('ads/ads-management.php'); ?>
-	
+    	
 	<?php if (get_option('woo_flickr_id') != "") { ?>
 	
 		<div class="flickr">
@@ -98,9 +102,7 @@ if ($children) { ?>
 		</div><!--/flickr-->
 	
 	<?php } ?>
-    
-	<?php include('ads/ads-bottom.php'); ?>
-	
+    	
 	<div class="fix"></div>
 	
 	<div class="subcol fl">
