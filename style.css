@@ -1,11 +1,11 @@
 /*
 Theme Name:     Burma Bulletin - Perry Santanachote
 Theme URI:      http://burmabulletin.com/
-Template:       livewire
+Template:       woothemes/livewire
 Description:    Perry Santanachote's Capstone project
-Version:        0.1
+Version:        0.1.0
 */
 
-@import url("../livewire/style.css");
+@import url("../../woothemes/livewire/style.css");
 
 #topbanner #search{ position:relative;}
